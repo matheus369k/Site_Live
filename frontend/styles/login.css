@@ -1,0 +1,59 @@
+@import url("./variables.css");
+@import url("./reset.css");
+@import url("./form.css");
+@import url("./util.css");
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  position: relative;
+  max-width: var(--max-w-login-container);
+  margin: auto;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.login-header {
+  text-align: center;
+}
+
+.login-header h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.login-header p {
+  color: var(--text-gray);
+}
+
+.login-form {
+  display: grid;
+  grid-template-rows: repeat(2, auto) min-content;
+  gap: 1rem;
+}
+
+.forgot-password a {
+  color: var(--text-gray);
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  color: var(--primary-color);
+}
+
+@media (width < 600px) {
+  .login-container {
+    padding: 1rem;
+  }
+}

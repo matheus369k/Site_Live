@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Modelo - Live Confidente</title>
+
+    <link rel="stylesheet" href="./styles/register-model.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+  </head>
+  <body>
+    <!--<header class="main-header">
+      <nav class="main-nav container">
+        <a href="index.html" class="logo">Live Confidente</a>
+
+        <div class="nav-buttons">
+          <div class="auth-buttons" id="authButtons">
+            <a href="login.html"
+              ><button class="btn btn-outline">Entrar</button></a
+            >
+            <div class="dropdown">
+              <a href="register.html"
+                ><button class="btn btn-primary dropdown-toggle">
+                  Cadastrar
+                </button></a
+              >
+              <div class="dropdown-menu">
+                <a href="register-client.html" class="dropdown-item">Cliente</a>
+                <a href="register-model.html" class="dropdown-item">Modelo</a>
+              </div> 
+            </div>
+          </div>
+          <div class="user-menu" id="userMenu" style="display: none">
+            <div class="dropdown">
+              <button class="btn btn-outline dropdown-toggle">
+                <span id="userName">Usuário</span>
+              </button>
+              <div class="dropdown-menu">
+                <a href="profile.html" class="dropdown-item">Meu Perfil</a>
+                <a href="#" class="dropdown-item" id="logoutButton">Sair</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header> -->
+
+    <main>
+      <div class="register-container">
+        <a href="register.html">
+          <button class="btn-close" type="button">
+            <i class="fas fa-times"></i>
+          </button>
+        </a>
+
+        <div class="register-header">
+          <h1>Cadastro de Modelo</h1>
+          <p>Crie sua conta e comece a fazer lives</p>
+        </div>
+
+        <form class="register-form" id="modelForm">
+          <div class="form-section">
+            <h2>Informações Básicas</h2>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nome Artístico </label>
+                <div class="field-group">
+                  <img src="./assets/icons/person.svg" alt="person icon" />
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Digite seu nome"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <div class="field-group">
+                  <img src="./assets/icons/email.svg" alt="email icon" />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="Digite seu e-mail"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="password">Senha</label>
+                <div class="field-group">
+                  <img src="./assets/icons/padlock.svg" alt="padlock icon" />
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                    placeholder="Digite sua senha"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="confirmPassword">Confirmar Senha</label>
+                <div class="field-group">
+                  <img src="./assets/icons/padlock.svg" alt="padlock icon" />
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    required
+                    placeholder="Digite sua senha novamente"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Perfil</h2>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="age">Idade</label>
+                <div class="field-group">
+                  <img src="./assets/icons/person.svg" alt="person icon" />
+                  <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    min="18"
+                    required
+                    placeholder="Digite sua idade"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="location">Estado</label>
+                <div class="field-group">
+                  <img
+                    src="./assets/icons/location-pin.svg"
+                    alt="location icon"
+                  />
+                  <select
+                    class="form-location"
+                    id="location"
+                    name="location"
+                    required
+                  >
+                    <option value="">Selecione...</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="bio">Biografia</label>
+              <div class="field-group">
+                <textarea
+                  id="bio"
+                  name="bio"
+                  required
+                  placeholder="Digite sua biografia"
+                ></textarea>
+                <img
+                  src="./assets/icons/message-circle.svg"
+                  alt="person icon"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Serviços</h2>
+            <div class="checkbox-grid">
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="service1"
+                  name="services"
+                  value="Live Privada"
+                />
+                <label for="service1">Live Privada</label>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="service2"
+                  name="services"
+                  value="Chat Exclusivo"
+                />
+                <label for="service2">Chat Exclusivo</label>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="service3"
+                  name="services"
+                  value="Vídeo Chamada"
+                />
+                <label for="service3">Vídeo Chamada</label>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="service4"
+                  name="services"
+                  value="Fotos Personalizadas"
+                />
+                <label for="service4">Fotos Personalizadas</label>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="service5"
+                  name="services"
+                  value="Shows Temáticos"
+                />
+                <label for="service5">Shows Temáticos</label>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="service6"
+                  name="services"
+                  value="Áudio Mensagens"
+                />
+                <label for="service6">Áudio Mensagens</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Especialidades</h2>
+            <div class="checkbox-grid">
+              <div class="checkbox-item">
+                <input type="checkbox" id="tag1" name="tags" value="Dança" />
+                <label for="tag1">Dança</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="tag2" name="tags" value="Cosplay" />
+                <label for="tag2">Cosplay</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="tag3" name="tags" value="ASMR" />
+                <label for="tag3">ASMR</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="tag4" name="tags" value="Fetiche" />
+                <label for="tag4">Fetiche</label>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="tag5"
+                  name="tags"
+                  value="Shows Temáticos"
+                />
+                <label for="tag5">Shows Temáticos</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Preços</h2>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="price10">10 minutos</label>
+                <div class="price-group">
+                  <span>R$</span>
+                  <input
+                    type="number"
+                    id="price10"
+                    name="price10"
+                    min="0"
+                    required
+                    placeholder="Digite o valor"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="price30">30 minutos</label>
+                <div class="price-group">
+                  <span>R$</span>
+                  <input
+                    type="number"
+                    id="price30"
+                    name="price30"
+                    min="0"
+                    required
+                    placeholder="Digite o valor"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="price60">1 hora</label>
+                <div class="price-group">
+                  <span>R$</span>
+                  <input
+                    type="number"
+                    id="price60"
+                    name="price60"
+                    min="0"
+                    required
+                    placeholder="Digite o valor"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="priceVIP">Mensalidade VIP</label>
+                <div class="price-group">
+                  <span>R$</span>
+                  <input
+                    type="number"
+                    id="priceVIP"
+                    name="priceVIP"
+                    min="0"
+                    required placeholder="Digite o valor" 
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Fotos</h2>
+            <label class="photo-upload" for="photos">
+              <span>Clique ou arraste suas fotos aqui</span>
+              <span style="color: var(--text-gray)">Máximo 5 fotos</span>
+              <input
+                type="file"
+                id="photos"
+                name="photos"
+                multiple
+                accept="image/*"
+                style="display: none"
+              />
+            </label>
+            <div
+              id="photoPreview"
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 1rem;
+                margin-top: 1rem;
+              "
+            ></div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Criar Conta</button>
+
+          <p class="terms">
+            Ao criar uma conta, você concorda com nossos
+            <a href="#">Termos de Uso</a> e
+            <a href="#">Política de Privacidade</a>
+          </p>
+        </form>
+      </div>
+    </main>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>

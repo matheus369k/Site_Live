@@ -1,0 +1,47 @@
+:root {
+  /* Cores principais com tons mais vibrantes */
+  --primary-color: #ff2d8d;
+  --primary-hover: #ff4b9f;
+  --secondary-color: #8a63ff;
+  --accent-color: #00f5e9;
+  --success-color: #00e676;
+  --warning-color: #ffd600;
+  --error-color: #ff1744;
+
+  /* Gradientes modernos */
+  --gradient-primary: linear-gradient(135deg, #ff2d8d, #8a63ff);
+  --gradient-secondary: linear-gradient(135deg, #00f5e9, #8a63ff);
+  --gradient-dark: linear-gradient(
+    135deg,
+    rgba(26, 26, 26, 0.98),
+    rgba(10, 10, 10, 0.98)
+  );
+
+  /* Backgrounds com mais profundidade */
+  --background: #0a0a0a;
+  --card-bg: #151515;
+  --card-bg-hover: #1a1a1a;
+
+  /* Efeitos de vidro refinados */
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+  /* Cores de texto com melhor legibilidade */
+  --text-color: #ffffff;
+  --text-secondary: #e0e0e0;
+  --text-gray: #9e9e9e;
+
+  /* Sombras mais suaves */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+  /* Medidas */
+  --border-radius: 8px;
+  --max-w-main-container: 1444px;
+  --max-w-login-container: 450px;
+  --max-w-register-container: 520px;
+  --max-w-register-client-container: 500px;
+  --max-w-register-model-container: 800px;
+}

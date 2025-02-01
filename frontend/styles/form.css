@@ -1,0 +1,51 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow: hidden;
+}
+
+.form-group label {
+  color: var(--text-gray);
+}
+
+.field-group {
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.field-group:focus-within {
+  border: 1px solid var(--primary-color);
+}
+
+.form-group img {
+  position: absolute;
+  top: 50%;
+  left: 0.70rem;
+  transform: translateY(-50%);
+}
+
+.form-group textarea + img {
+  transform: translateY(0%);
+  top: auto;
+  left: auto;
+  bottom: 0.75rem;
+  right: 0.75rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  line-height: 1;
+  background-color: transparent;
+  padding: 1rem;
+  color: white;
+  width: 100%;
+}
+
+.form-group input,
+.form-group select {
+  padding-left: 2.6rem;
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Confidente - Encontre a companhia perfeita</title>
+
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-nav container">
+        <a href="index.html" class="logo">Live Confidente</a>
+
+        <div class="nav-buttons">
+          <!-- <div class="auth-buttons" id="authButtons" style="display: none">
+            <i class="menu-icon"></i>
+
+            <div class="auth-dropdown">
+              <a href="login.html"
+                ><button class="btn btn-outline">Entrar</button></a
+              >
+
+              <a href="register.html"
+                ><button class="btn btn-primary dropdown-toggle">
+                  Cadastrar
+                </button></a
+              >
+            </div>
+          </div>-->
+          <div class="user-menu">
+            <div class="dropdown">
+              <button class="btn btn-outline dropdown-toggle">
+                <span id="userName">Usuário</span>
+              </button>
+
+              <div class="dropdown-menu" id="userMenu" style="display: none">
+                <a href="profile.html" class="dropdown-item">Meu Perfil</a>
+                <a href="#" class="dropdown-item" id="logoutButton">Sair</a>
+              </div>
+
+              <div class="dropdown-menu" id="authButtons">
+                <a href="register.html" class="dropdown-item">
+                  Cadastrar
+                </a>
+                <a href="login.html" class="dropdown-item">Entrar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="search-section">
+        <h1 class="search-title">
+          Encontre a companhia perfeita<br />para seu momento
+        </h1>
+        <p class="search-subtitle">
+          Conectamos você com as melhores acompanhantes da sua região.
+          Experiências únicas, seguras e discretas.
+        </p>
+
+        <div class="search-container">
+          <div class="form-group">
+            <div class="field-group">
+              <img src="./assets/icons/person.svg" alt="person icon" />
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Buscar por nome..."
+                id="searchInput"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="field-group">
+              <img src="./assets/icons/location-pin.svg" alt="location icon" />
+              <select class="form-control" id="cityFilter">
+                <option value="">Selecione o estado</option>
+                <option value="sp">São Paulo</option>
+                <option value="rj">Rio de Janeiro</option>
+                <option value="df">Distrito Federal</option>
+                <option value="mg">Minas Gerais</option>
+                <option value="rs">Rio Grande do Sul</option>
+                <option value="pr">Paraná</option>
+                <option value="ba">Bahia</option>
+                <option value="sc">Santa Catarina</option>
+                <option value="go">Goiás</option>
+                <option value="pe">Pernambuco</option>
+                <option value="ce">Ceará</option>
+                <option value="pa">Pará</option>
+                <option value="mt">Mato Grosso</option>
+                <option value="es">Espírito Santo</option>
+                <option value="pb">Paraíba</option>
+                <option value="rn">Rio Grande do Norte</option>
+                <option value="ms">Mato Grosso do Sul</option>
+                <option value="pi">Piauí</option>
+                <option value="am">Amazonas</option>
+                <option value="ma">Maranhão</option>
+                <option value="ro">Rondônia</option>
+                <option value="to">Tocantins</option>
+                <option value="ac">Acre</option>
+                <option value="ap">Amapá</option>
+                <option value="rr">Roraima</option>
+                <option value="se">Sergipe</option>
+                <option value="al">Alagoas</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn btn-primary">
+            <img src="./assets/icons/search.svg" title="Buscar" />
+            Buscar
+          </button>
+        </div>
+
+        <div class="stats-section">
+          <div class="stat-item">
+            <img class="stat-icon" src="./assets/icons/face-smile.svg" />
+            <span class="stat-value">10,000+</span>
+            <span class="stat-label">Usuários</span>
+          </div>
+          <div class="stat-item">
+            <img class="stat-icon" src="./assets/icons/star.svg" />
+            <span class="stat-value">4.8</span>
+            <span class="stat-label">Avaliação média</span>
+          </div>
+          <div class="stat-item">
+            <img class="stat-icon" src="./assets/icons/shield-checkmark.svg" />
+            <span class="stat-value">100%</span>
+            <span class="stat-label">Seguro</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="models-section">
+        <div class="models-header">
+          <h2 class="models-title">Destaque</h2>
+
+          <div class="filter-container">
+            <div class="filter-dropdown btn btn-outline ">
+              <span>Filtro</span>
+              <i class="filter-badge"></i>
+            </div>
+
+            <div class="filter-tags">
+              <span class="filter-tag active">Todos</span>
+              <span class="filter-tag">Novos</span>
+              <span class="filter-tag">Verificados</span>
+              <span class="filter-tag">VIP</span>
+              <span class="filter-tag">Online</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="models-grid" id="modelsGrid">
+          <!-- Modelos serão inseridos via JavaScript -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Chat Container -->
+    <div class="chat-container" id="chatContainer">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <img
+            src=""
+            alt="Foto de perfil"
+            class="chat-avatar"
+            id="profilePhotoChat"
+          />
+          <div class="chat-user-info">
+            <h4 id="profileNameChat"></h4>
+            <p>Online agora</p>
+          </div>
+        </div>
+        <button class="chat-close" id="chatClose">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="message message-received">
+          Olá! Como posso ajudar você hoje?
+        </div>
+      </div>
+      <div class="chat-input">
+        <input
+          type="text"
+          placeholder="Digite sua mensagem..."
+          id="messageInput"
+        />
+        <button class="chat-send" id="sendMessage">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>

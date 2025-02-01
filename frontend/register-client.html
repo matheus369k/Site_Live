@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Cliente - Live Confidente</title>
+
+    <link rel="stylesheet" href="./styles/register-client.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+  </head>
+  <body>
+    <!-- <header class="main-header">
+      <nav class="main-nav container">
+        <a href="index.html" class="logo">Live Confidente</a>
+
+        <div class="nav-buttons">
+          <div class="auth-buttons" id="authButtons">
+            <a href="login.html"
+              ><button class="btn btn-outline">Entrar</button></a
+            >
+            <div class="dropdown">
+              <a href="register.html"
+                ><button class="btn btn-primary dropdown-toggle">
+                  Cadastrar
+                </button></a
+              >
+              <div class="dropdown-menu">
+                <a href="register-client.html" class="dropdown-item">Cliente</a>
+                <a href="register-model.html" class="dropdown-item">Modelo</a>
+              </div>
+            </div>
+          </div>
+          <div class="user-menu" id="userMenu" style="display: none">
+            <div class="dropdown">
+              <button class="btn btn-outline dropdown-toggle">
+                <span id="userName">Usuário</span>
+              </button>
+              <div class="dropdown-menu">
+                <a href="profile.html" class="dropdown-item">Meu Perfil</a>
+                <a href="#" class="dropdown-item" id="logoutButton">Sair</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header> -->
+
+    <main>
+      <div class="register-container">
+        <a href="register.html">
+          <button class="btn-close" type="button">
+            <i class="fas fa-times"></i>
+          </button>
+        </a>
+
+        <div class="register-header">
+          <h1>Cadastro de Cliente</h1>
+          <p>Crie sua conta para começar a assistir</p>
+        </div>
+
+        <form class="register-form" id="registerClientForm">
+          <div class="form-group">
+            <label for="email">E-mail </label>
+            <div class="field-group">
+              <img src="./assets/icons/email.svg" alt="email icon" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Digite seu e-mail"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Senha </label>
+            <div class="field-group">
+              <img src="./assets/icons/padlock.svg" alt="password icon" />
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="Digite sua senha"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">Confirmar Senha</label>
+            <div class="field-group">
+              <img
+                src="./assets/icons/padlock.svg"
+                alt="password icon"
+              />
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                required
+                placeholder="Digite sua senha novamente"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Criar Conta</button>
+
+          <p class="terms">
+            Ao criar uma conta, você concorda com nossos
+            <a href="#">Termos de Uso</a> e
+            <a href="#">Política de Privacidade</a>
+          </p>
+        </form>
+      </div>
+    </main>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>

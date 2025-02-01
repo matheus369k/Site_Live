@@ -1,0 +1,93 @@
+/* Melhorias na tipografia */
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--background);
+  color: var(--text-color);
+  line-height: 1.6;
+  letter-spacing: 0.015em;
+}
+
+/* Botões */
+.btn {
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--border-radius);
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  text-decoration: none;
+  min-width: 8.125rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 45, 141, 0.3);
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-secondary);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 45, 141, 0.4);
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-outline {
+  background: var(--glass-bg);
+  border: 2px solid var(--glass-border);
+  color: var(--text-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.btn-outline:hover {
+  background: var(--glass-bg);
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 245, 233, 0.2);
+}
+
+.btn-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  color: var(--text-gray);
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.btn-close:hover {
+  color: var(--text-color);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9375rem;
+  }
+}

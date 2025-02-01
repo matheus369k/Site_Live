@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil - Live Confidente</title>
+    <link rel="stylesheet" href="./styles/profile.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-nav container">
+        <a href="index.html" class="logo">Live Confidente</a>
+
+        <div class="nav-links">
+          <!-- Será preenchido pelo auth.js -->
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="profile-container">
+        <div class="profile-header">
+          <div class="profile-cover">
+            <div class="profile-photo">
+              <img src="" alt="" id="profilePhoto" />
+              <span class="online-status"></span>
+            </div>
+          </div>
+          <div class="profile-info">
+            <div class="profile-title">
+              <h1 id="profileName"></h1>
+              <span
+                class="verified-badge"
+                id="verifiedBadge"
+                style="display: none"
+                >✓ Verificada</span
+              >
+            </div>
+            <div class="profile-meta">
+              <span id="profileAge"></span>
+              <span id="profileLocation"></span>
+              <span id="profileCategory"></span>
+            </div>
+            <div class="profile-rating">
+              <span class="rating-stars"
+                >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+              >
+              <span class="rating-value" id="profileRating"></span>
+              <span class="rating-count" id="profileReviewCount"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-actions">
+          <button class="btn btn-primary" id="liveButton">
+            <span>Entrar na Live</span>
+          </button>
+          <button class="btn btn-outline" id="privateButton">
+            <span>Show Privado</span>
+          </button>
+          <button class="btn btn-outline" id="followButton">
+            <span>Seguir</span>
+          </button>
+          <button class="btn btn-outline" id="tipButton">
+            <span>Enviar Presente</span>
+          </button>
+          <button class="btn btn-chat" id="btnChat">
+            <i class="fas fa-comments"></i>
+            Chat Exclusivo
+          </button>
+        </div>
+
+        <div class="profile-tabs">
+          <button class="tab-button active" data-tab="about">Sobre</button>
+          <button class="tab-button" data-tab="photos">Fotos</button>
+          <button class="tab-button" data-tab="reviews">Avaliações</button>
+          <button class="tab-button" data-tab="availability">
+            Disponibilidade
+          </button>
+        </div>
+
+        <div class="tab-content">
+          <!-- Aba Sobre -->
+          <div class="tab-pane active" id="about">
+            <div class="info-section">
+              <h2>Sobre mim</h2>
+              <p id="profileBio"></p>
+            </div>
+
+            <div class="info-section">
+              <h2>Serviços</h2>
+              <div class="services-grid" id="profileServices">
+                <!-- Preenchido via JavaScript -->
+              </div>
+            </div>
+
+            <div class="info-section">
+              <h2>Valores</h2>
+              <div class="pricing-table" id="profilePricing">
+                <!-- Preenchido via JavaScript -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Aba Fotos -->
+          <div class="tab-pane" id="photos">
+            <div class="photo-grid" id="profilePhotos">
+              <!-- Preenchido via JavaScript -->
+            </div>
+          </div>
+
+          <!-- Aba Avaliações -->
+          <div class="tab-pane" id="reviews">
+            <div class="reviews-list" id="profileReviews">
+              <!-- Preenchido via JavaScript -->
+            </div>
+          </div>
+
+          <!-- Aba Disponibilidade -->
+          <div class="tab-pane" id="availability">
+            <div class="calendar-view" id="profileCalendar">
+              <!-- Preenchido via JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Chat Container -->
+    <div class="chat-container" id="chatContainer">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <img
+            src=""
+            alt="Foto de perfil"
+            class="chat-avatar"
+            id="profilePhotoChat"
+          />
+          <div class="chat-user-info">
+            <h4 id="profileNameChat"></h4>
+            <p>Online agora</p>
+          </div>
+        </div>
+        <button class="chat-close" id="chatClose">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="message message-received">
+          Olá! Como posso ajudar você hoje?
+        </div>
+      </div>
+      <div class="chat-input">
+        <input
+          type="text"
+          placeholder="Digite sua mensagem..."
+          id="messageInput"
+        />
+        <button class="chat-send" id="sendMessage">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>
